@@ -49,7 +49,7 @@ function App() {
   /* ------------------------------------------------DIRECT API CALLS ------------------------------------------------ */
   async function getCurrentWeather(cityId) {
     const apiKey = 'a30d1945225aa875a071db924f0dc429';
-    const apiUrl = `http://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${apiKey}`;
     const response = await axios.get(apiUrl);
     const city = response.data;
     const cityCurrent = {
