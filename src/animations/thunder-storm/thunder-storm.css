@@ -1,0 +1,26 @@
+.thunderStormAnimationHolder {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.thumb {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50px;
+}
+.dayStorm {
+  background: linear-gradient(to bottom, #bdc3c7, #7d8a97);
+}
+.nightStorm {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.lightningCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

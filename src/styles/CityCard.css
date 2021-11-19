@@ -1,0 +1,211 @@
+/* --------------------------------------------------------MAIN CARD CSS --------------------------------------------------------*/
+.cityCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 7vh;
+  font-weight: 300;
+}
+
+.firstPage {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.secondPage {
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/*------------------------------------------------------- CARD HEADER CSS -------------------------------------------------------*/
+.cityCardHeader {
+  padding-top: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  font-weight: 280;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cityName {
+  font-size: 52px;
+}
+.cityTemp {
+  font-size: 48px;
+}
+.cityWeatherCondition {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+/*------------------------------------------------------- CLOTHING TIPS -------------------------------------------------------*/
+.cityCardTipsContainer {
+  color: white;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.writtenTips {
+  max-width: 250px;
+  padding: 10px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.062);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.2);
+  border-radius: 25px;
+  background-color: rgba(211, 211, 211, 0.116);
+}
+.greeting {
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  align-self: center;
+}
+.tip {
+  font-size: 18px;
+  font-weight: 270;
+}
+.avatarHolder {
+  flex: 1;
+}
+.avatarImg:hover {
+  animation: kreep 0.7s ease 0.1s infinite alternate;
+}
+.avatarImg {
+  cursor: pointer;
+  margin-top: 3vh;
+  height: 55vh;
+  object-fit: contain;
+}
+@keyframes kreep {
+  0% {
+    -webkit-transform: scale(1.1, 1);
+    transform: scale(1.1, 1);
+  }
+  50% {
+    -webkit-transform: scale(0.9, 1.01) translateY(-0.2rem);
+  }
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.tipsDisplay {
+  display: flex;
+}
+.tipsHide {
+  display: none;
+}
+
+/*------------------------------------------------------- HOURLY FORECASTS -------------------------------------------------------*/
+.hourlyForecastsHolder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  color: white;
+  word-wrap: break-word;
+}
+.hourlyForecastsTitle {
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  font-weight: 280;
+}
+.hourlyForecastSwiper {
+  margin-top: 2vh;
+}
+.hourlyForecastSlide {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.hourlyForecastIcon {
+  width: 40px;
+  height: 20px;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------DAILY FORECASTS------------------------------------------------------- */
+.dailyForecastsHolder {
+  padding-top: 2vh;
+  width: 100%;
+  color: white;
+}
+.dailyForecastsTitle {
+  font-size: 30px;
+  font-weight: 280;
+  text-align: left;
+  margin-bottom: 2vh;
+}
+.dailyForecastsSlidesHolder {
+  justify-content: center;
+  border-top: 1px solid white;
+}
+.dailyForecastSlide {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding-top: 5px;
+}
+.dailyForecastDay {
+  flex: 4;
+  text-align: left;
+  padding-left: 2%;
+}
+.dailyForecastIconHolder {
+  flex: 2;
+}
+.hourlyForecastTemperature {
+  flex: 2;
+}
+.dailyForecastIcon {
+  width: 40px;
+  height: 20px;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------MEDIA QUERIES --------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .cityCardHeader {
+    padding-top: 0;
+  }
+  .cityCard {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+  .firstPage {
+    width: 50%;
+    height: 100%;
+  }
+  .secondPage {
+    width: 50%;
+    height: 100%;
+  }
+  .avatarImg {
+    height: 60vh;
+  }
+
+  .cityCardTipsContainer {
+    flex-direction: row;
+  }
+  .hourlyForecastsHolder {
+    padding-top: 0;
+  }
+}

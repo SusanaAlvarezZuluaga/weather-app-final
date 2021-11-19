@@ -1,0 +1,37 @@
+.sandDustAnimationHolder {
+  background: linear-gradient(to bottom, #5c5c2d, #5c5c2d6c);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.thumb {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50px;
+}
+
+.sandDust {
+  width: 100%;
+  height: 100%;
+  background-image: url('./sandDust.png');
+  background-size: cover;
+  position: absolute;
+  opacity: 0.3;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  animation: animate 150s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 504400px;
+  }
+}

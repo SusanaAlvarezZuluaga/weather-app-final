@@ -1,0 +1,45 @@
+.cloudsDayAnimationHolder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.cloudyDay {
+  background: linear-gradient(to bottom, #7cd4ef, #7cd4ef6e);
+  background-color: #00000038;
+}
+
+.veryCloudyDay {
+  background: linear-gradient(to bottom, #8e9eab, #8e9eaba6);
+  background-color: #000000;
+}
+
+.clouds {
+  width: 100%;
+  height: 100%;
+  background-image: url('./cloud.png');
+  opacity: 0.6;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  animation: animate 500s linear infinite;
+}
+.thumb {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50px;
+}
+@keyframes animate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 5440px;
+  }
+}

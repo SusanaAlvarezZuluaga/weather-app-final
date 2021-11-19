@@ -1,0 +1,367 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/*-----------------------Page Container-------------------------*/
+.pageStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-60deg, #35c7f096, #267c92b4, #f8aa00b4);
+  font-weight: 270;
+  /*Color Options #cccccc, #ffffff, #b8ecff, #e2e2e2, #a4e7ff*   or #155263, #155263, #23a6d5, #ffca18 */
+
+  background-image: linear-gradient(
+    to right,
+    #09a8d886,
+    rgba(191, 233, 255, 0.685),
+    #ee141434,
+    #1b2735
+  );
+  background: linear-gradient(
+    -60deg,
+    rgba(191, 233, 255, 0.685),
+    #09a8d85b,
+    #267c9271,
+    #f8aa0083
+  );
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  background-color: #696969a3;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* -------------- Children 1 - Container 1------------------------*/
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+  padding-top: 3vh;
+}
+
+/* -------------- Children 1 - Container 2------------------------*/
+.formBodyStyle {
+  /* max-height: 60vh; */
+}
+
+/* -------------- Children 1 - Container 3------------------------*/
+.socialMedia {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* max-height: 8vh; */
+  /* position: fixed;
+  bottom: 2vh;
+  z-index: 0; */
+}
+
+/* -------------- Other children ----------------------------------------*/
+.logo-home-page {
+  height: 100%;
+}
+
+/*--------------FORM STYLE childrens-----------------------------------------------*/
+
+.pageStyleTopParagraph {
+  color: white;
+  opacity: 0.7;
+  font-weight: 270;
+  text-align: center;
+}
+.big-text {
+  font-size: 36px;
+}
+.smaller-text {
+  font-size: 24px;
+}
+
+.formItemsStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formLabelStyle {
+  padding-left: 10px;
+  border-radius: 25px;
+  background-color: whitesmoke;
+  border: 0px solid;
+  opacity: 0.6;
+  height: 30px;
+  width: 80vw;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.loginPageGenderDisplay {
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+  margin-bottom: 10px;
+}
+.centerButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitButton {
+  /* position: absolute;
+  bottom: 20px;
+  15px; */
+  margin-bottom: 15px;
+  margin-top: 15px;
+  user-select: none;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  color: grey;
+  background: white;
+  opacity: 0.6;
+  transition: 500ms ease-in-out;
+  border-radius: 25px;
+  border: none;
+}
+
+.submitButton:hover {
+  box-shadow: 20px 5px 0 rgb(83, 106, 131), -20px -5px 0 rgb(104, 129, 156);
+}
+.sumbmitButton:focus {
+  outline: none;
+}
+
+/*-----------------gender icons -------------------------------------*/
+
+input[name='gender'] {
+  appearance: none;
+  outline: none;
+}
+input[name='gender']:after {
+  font-family: 'FontAwesome';
+  text-align: center;
+  font-size: 100px;
+  content: attr(data-icon);
+  padding: 10px 10px;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.226);
+  transition: box-shadow 1s, color 1s;
+}
+input[name='gender']:checked:after {
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*-----------------social media icons -------------------------------------*/
+.socialMediaDesktop {
+  display: none;
+}
+.wrapper .button {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover {
+  width: 110px;
+}
+.wrapper .button .icon {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon {
+  background: #4267b2;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+  background: #e1306c;
+}
+.wrapper .button:nth-child(3):hover .icon {
+  background: #333;
+}
+
+.wrapper .button .icon i {
+  font-size: 14px;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+  color: #474f40;
+}
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+.wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span {
+  color: #4267b2;
+  font-size: 10px;
+}
+.wrapper .button:nth-child(2) span {
+  color: #494646;
+  font-size: 10px;
+}
+.wrapper .button:nth-child(3) span {
+  color: #333;
+  font-size: 10px;
+}
+
+.toastContainer {
+  overflow: hidden;
+  overflow-x: auto;
+  display: grid;
+  justify-content: center;
+  bottom: 5vh;
+  grid-gap: 20px;
+  position: fixed;
+  user-select: none;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.containerPosition {
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.toast {
+  padding: 8px;
+  min-width: 200px;
+  max-width: 400px;
+  color: var(--toast-white);
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+  border-radius: 15px;
+}
+
+.removeHiperLinks {
+  text-decoration: none;
+}
+
+/*-----------------media query -------------------------------------*/
+@media screen and (min-width: 430px) {
+  .formLabelStyle {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pageStyle {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoContainer {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-home-page {
+    height: 25%;
+    max-height: 205px;
+  }
+
+  .pageStyleTopParagraph {
+    color: white;
+    opacity: 0.7;
+  }
+  .formBodyStyle {
+    width: 50vw;
+    margin-top: 0%;
+  }
+
+  input[name='gender']:after {
+    font-size: 100px;
+  }
+
+  .formLabelStyle {
+    width: 50vw;
+  }
+
+  .centerButton {
+    width: 100%;
+  }
+
+  .socialMedia {
+    display: none;
+  }
+
+  .socialMediaDesktop {
+    display: flex;
+    margin-top: 5%;
+  }
+  /*-----------------social media icons -------------------------------------*/
+
+  .wrapper .button {
+    height: 60px;
+    width: 60px;
+    line-height: 70px;
+  }
+
+  .wrapper .button:hover {
+    width: 150px;
+  }
+
+  .wrapper .button .icon {
+    height: 60px;
+    width: 60px;
+    line-height: 70px;
+  }
+
+  .wrapper .button .icon i {
+    font-size: 25px;
+  }
+
+  .wrapper .button span {
+    font-size: 25px;
+    margin-left: 10px;
+    line-height: 70px;
+  }
+
+  .wrapper .button:nth-child(1) span {
+    font-size: 15px;
+  }
+  .wrapper .button:nth-child(2) span {
+    font-size: 15px;
+  }
+  .wrapper .button:nth-child(3) span {
+    font-size: 15px;
+  }
+
+  .formLabelStyle {
+    width: 350px;
+  }
+
+  .containerPosition {
+    left: 75%;
+  }
+}

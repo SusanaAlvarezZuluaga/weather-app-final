@@ -1,0 +1,97 @@
+.searchPage {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  backdrop-filter: blur(50px);
+  background-color: #00000033;
+  color: white;
+}
+.iconHolderReturnArrow {
+  margin-top: 2vh;
+  margin-left: 2vh;
+}
+.material-icons.returnArrow {
+  color: white;
+}
+
+/*----------------------------------------------------SEARCH  BAR  ----------------------------------------------------*/
+
+.searchBarComponentHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: 270;
+}
+.searchBarHolder {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  height: 32px;
+  background-color: white;
+  opacity: 0.6;
+  padding-left: 15px;
+  color: white;
+}
+.iconHolderSearch {
+  flex: 1;
+  text-align: left;
+}
+.material-icons.search {
+  padding: 10px;
+  color: lightgrey;
+}
+.searchSpaceHolder {
+  background-color: transparent;
+  flex: 10;
+  text-align: center;
+}
+.searchSpace {
+  width: 100%;
+  height: 30px;
+  border: 0px;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+}
+.iconHolderClear {
+  flex: 1;
+  text-align: right;
+}
+.material-icons.clear {
+  padding: 10px;
+  color: lightgrey;
+}
+.cityResultsHolder {
+  margin-top: 15px;
+  max-height: 70%;
+  overflow: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 150;
+  font-weight: 270;
+}
+.smallHolder {
+  width: 90%;
+  max-height: 200px;
+  font-size: 18px;
+}
+.cityResult {
+  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-bottom: solid 1px rgb(224, 234, 245);
+}
+
+/*----------------------------------------------------MEDIA QUERIES ----------------------------------------------------*/

@@ -1,0 +1,106 @@
+body {
+  margin: 0px;
+}
+.homePage {
+  background-color: #69696934;
+  color: white;
+  height: 100%;
+}
+.mainSlider {
+  height: 100%;
+  width: 100%;
+}
+
+/* ------------------------------------------------------NAVIGATION ------------------------------------------------------*/
+.navigation {
+  display: none;
+}
+
+.arrows {
+  font-size: 72px;
+}
+.swiper-button-disabled span {
+  opacity: 0.3;
+}
+.slide {
+  z-index: -1;
+  padding-bottom: 5vh;
+}
+/* ------------------------------------------------------FOOTER------------------------------------------------------*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 10vh;
+  border-top: solid 2px white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+.logo-holder {
+  margin-left: 2%;
+  flex: 1;
+}
+
+.searchBar {
+  margin-right: 2%;
+  flex: 1;
+  text-align: right;
+}
+.logo {
+  height: 7vh;
+}
+.material-icons.md-36 {
+  color: white;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------PAGINATION ------------------------------------------------------*/
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.301);
+  margin: 2px;
+  border-radius: 50%;
+}
+.bulletActive {
+  background: white;
+}
+/* ------------------------------------------------------MEDIA QUERY ------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .dotsContainer {
+    display: none;
+  }
+  .logo {
+    content: url('../images/white-logo-stretched.png');
+    height: 5vh;
+  }
+  .footer {
+    position: fixed;
+    top: 0;
+    border-bottom: solid 2px white;
+  }
+  .footer {
+    top: 0;
+    height: 10vh;
+  }
+  .slide {
+    padding-top: 14vh;
+  }
+  .navigation {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    display: none;
+  }
+}
