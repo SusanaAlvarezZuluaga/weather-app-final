@@ -84,7 +84,7 @@
   height: 100px;
 }
 #firstRadioButton {
-  margin-right: 100px;
+  margin-right: 75px;
 }
 .genderButton {
   outline: none !important;
@@ -94,6 +94,7 @@
   -ms-appearance: none !important;
   -o-appearance: none !important;
   appearance: none !important;
+  display: hidden;
 }
 .genderButton:after {
   font-family: 'FontAwesome';
