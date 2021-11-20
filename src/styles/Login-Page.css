@@ -2,22 +2,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 /*-----------------------Page Container-------------------------*/
-.pageStyle {
+.loginPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(-60deg, #35c7f096, #267c92b4, #f8aa00b4);
   font-weight: 270;
-  /*Color Options #cccccc, #ffffff, #b8ecff, #e2e2e2, #a4e7ff*   or #155263, #155263, #23a6d5, #ffca18 */
-
-  background-image: linear-gradient(
-    to right,
-    #09a8d886,
-    rgba(191, 233, 255, 0.685),
-    #ee141434,
-    #1b2735
-  );
   background: linear-gradient(
     -60deg,
     rgba(191, 233, 255, 0.685),
@@ -42,73 +32,78 @@
   }
 }
 
-/* -------------- Children 1 - Container 1------------------------*/
+/* -------------- logo ------------------------*/
 .logoContainer {
   display: flex;
   justify-content: center;
   height: 15vh;
   padding-top: 3vh;
 }
-
-/* -------------- Children 1 - Container 2------------------------*/
-.formBodyStyle {
-  /* max-height: 60vh; */
-}
-
-/* -------------- Children 1 - Container 3------------------------*/
-.socialMedia {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  /* max-height: 8vh; */
-  /* position: fixed;
-  bottom: 2vh;
-  z-index: 0; */
-}
-
-/* -------------- Other children ----------------------------------------*/
 .logo-home-page {
   height: 100%;
 }
 
-/*--------------FORM STYLE childrens-----------------------------------------------*/
+/*------------------------------------------------------------------Written content------------------------------------------------*/
 
-.pageStyleTopParagraph {
+.writtenContent {
   color: white;
-  opacity: 0.7;
   font-weight: 270;
   text-align: center;
 }
-.big-text {
+.bigText {
   font-size: 36px;
 }
-.smaller-text {
+.smallerText {
   font-size: 24px;
 }
+/*----------------------------------------------------------------FORM STYLE-----------------------------------------------*/
 
-.formItemsStyle {
+.formStyle {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.formLabelStyle {
+.nameInput {
   padding-left: 10px;
   border-radius: 25px;
-  background-color: whitesmoke;
-  border: 0px solid;
+  background-color: white;
+  border: 0px;
   opacity: 0.6;
   height: 30px;
   width: 80vw;
   outline: none;
   margin-bottom: 15px;
 }
-
-.loginPageGenderDisplay {
+/*-----------------gender icons -------------------------------------*/
+.genderButtonsHolder {
   display: flex;
   justify-content: center;
-  padding-top: 2vh;
   margin-bottom: 10px;
 }
+.genderButton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.genderButton:after {
+  font-family: 'FontAwesome';
+  text-align: center;
+  font-size: 75px;
+  content: attr(data-icon);
+  padding: 10px 10px;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.226);
+  transition: box-shadow 1s, color 1s;
+}
+.genderButton:checked:after {
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .centerButton {
   display: flex;
   flex-direction: column;
@@ -116,9 +111,6 @@
 }
 
 .submitButton {
-  /* position: absolute;
-  bottom: 20px;
-  15px; */
   margin-bottom: 15px;
   margin-top: 15px;
   user-select: none;
@@ -140,31 +132,15 @@
   outline: none;
 }
 
-/*-----------------gender icons -------------------------------------*/
-
-input[name='gender'] {
-  appearance: none;
-  outline: none;
-}
-input[name='gender']:after {
-  font-family: 'FontAwesome';
-  text-align: center;
-  font-size: 50px;
-  content: attr(data-icon);
-  padding: 10px 10px;
-  border-radius: 15px;
-  color: rgba(0, 0, 0, 0.226);
-  transition: box-shadow 1s, color 1s;
-}
-input[name='gender']:checked:after {
-  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.4);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/*-----------------social media icons -------------------------------------*/
+/*-----------------social media------------------------------------*/
 .socialMediaDesktop {
   display: none;
 }
+.socialMediaMobile {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .wrapper .button {
   display: inline-block;
   height: 40px;
@@ -266,12 +242,12 @@ input[name='gender']:checked:after {
 
 /*-----------------media query -------------------------------------*/
 @media screen and (min-width: 430px) {
-  .formLabelStyle {
+  .nameInput {
     width: 350px;
   }
 }
 @media screen and (min-width: 768px) {
-  .pageStyle {
+  .loginPage {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -290,20 +266,11 @@ input[name='gender']:checked:after {
     max-height: 205px;
   }
 
-  .pageStyleTopParagraph {
-    color: white;
-    opacity: 0.7;
-  }
-  .formBodyStyle {
-    width: 50vw;
-    margin-top: 0%;
-  }
-
   input[name='gender']:after {
     font-size: 100px;
   }
 
-  .formLabelStyle {
+  .nameInput {
     width: 50vw;
   }
 
@@ -311,7 +278,7 @@ input[name='gender']:checked:after {
     width: 100%;
   }
 
-  .socialMedia {
+  .socialMediaMobile {
     display: none;
   }
 
@@ -357,7 +324,7 @@ input[name='gender']:checked:after {
     font-size: 15px;
   }
 
-  .formLabelStyle {
+  .nameInput {
     width: 350px;
   }
 

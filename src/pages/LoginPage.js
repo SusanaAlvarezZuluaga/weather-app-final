@@ -29,7 +29,7 @@ function LoginPage(props) {
   };
 
   return (
-    <div className="pageStyle">
+    <div className="loginPage">
       <div className="logoContainer">
         <img className="logo-home-page" src={logoWhite} alt="logoWhite" />
 
@@ -38,22 +38,23 @@ function LoginPage(props) {
         </div>
       </div>
 
-      <div className="formBodyStyle">
-        <div className="pageStyleTopParagraph">
-          <p className="big-text"> Tell us who and where you are...</p>
-          <p className="smaller-text"> We'll tell you what to wear!</p>
+      <div className="bodyStyle">
+        <div className="writtenContent">
+          <p className="bigText"> Tell us who and where you are...</p>
+          <p className="smallerText"> We'll tell you what to wear!</p>
         </div>
-        <form lang="en" className="formItemsStyle" onSubmit={handleFormSubmit}>
+        <form lang="en" className="formStyle" onSubmit={handleFormSubmit}>
           <input
-            className="formLabelStyle"
+            className="nameInput"
             name="name"
             type="text"
             placeholder="Please enter your Name"
             value={name}
             onChange={handleLoginPageName}
           />
-          <div className="loginPageGenderDisplay">
+          <div className="genderButtonsHolder">
             <input
+              className="genderButton"
               type="radio"
               name="gender"
               check={gender === 'female'}
@@ -62,6 +63,7 @@ function LoginPage(props) {
               onChange={handleGenderChange}
             />
             <input
+              className="genderButton"
               type="radio"
               name="gender"
               check={gender === 'male'}
@@ -90,7 +92,7 @@ function LoginPage(props) {
         </form>
       </div>
 
-      <div className="socialMedia">
+      <div className="socialMediaMobile">
         <SocialMedia />
       </div>
     </div>
