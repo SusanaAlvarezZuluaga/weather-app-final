@@ -54,6 +54,7 @@ function LoginPage(props) {
           />
           <div className="genderButtonsHolder">
             <input
+              id="firstRadioButton"
               className="genderButton"
               type="radio"
               name="gender"
