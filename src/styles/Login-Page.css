@@ -95,6 +95,7 @@
   -o-appearance: none !important;
   appearance: none !important;
   display: hidden;
+  border: transparent;
 }
 .genderButton:after {
   font-family: 'FontAwesome';
