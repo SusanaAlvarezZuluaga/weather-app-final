@@ -104,7 +104,7 @@
   color: rgba(0, 0, 0, 0.226);
   transition: box-shadow 1s, color 1s;
   position: relative;
-  right: 10px;
+  right: 20px;
 }
 .genderButton:checked:after {
   box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.4);
