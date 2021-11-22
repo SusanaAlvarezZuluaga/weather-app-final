@@ -32,21 +32,6 @@ function App() {
       ...cityList,
     ]);
   }
-  /* ------------------------------------------------API CALLS TO BACKEND ------------------------------------------------ */
-  /*   async function getCurrentWeather(cityId) {
-    const apiUrl = `${process.env.REACT_APP_WEATHER_API_URL}/currentWeather/${cityId}`;
-    const response = await axios.get(apiUrl);
-    const cityCurrent = response.data;
-    return cityCurrent;
-  }
-
-  async function getForecasts(lon, lat) {
-    let apiUrl = `${process.env.REACT_APP_WEATHER_API_URL}/weatherForecast?lat=${lat}&lon=${lon}`;
-    const response = await axios.get(apiUrl);
-    const forecast = response.data;
-    return forecast;
-  } */
-  /* ------------------------------------------------DIRECT API CALLS ------------------------------------------------ */
   async function getCurrentWeather(cityId) {
     const apiKey = process.env.REACT_APP_API_KEY;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${apiKey}`;
@@ -69,7 +54,6 @@ function App() {
     const utcOffset = response.data.timezone_offset;
     const hourly = response.data.hourly;
     const daily = response.data.daily;
-    //reduce hourly and reduce daily
     let hourlyReduced = hourly.map((hour, index) => ({
       id: index,
       temp: hour.temp,

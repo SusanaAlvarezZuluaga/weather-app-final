@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import GetCityResults from '../functions/GetCityResults';
 
 import CityResult from '../components/CityResult';
@@ -12,12 +11,8 @@ function SearchBar(props) {
   const [cityName, setCityName] = useState('');
   const [dataFound, setDataFound] = useState([]);
   useEffect(() => {
-    /* ---------------------------------------------------DIRECT CALL ---------------------------------------------------*/
     let results = GetCityResults(cityName);
     setDataFound(results);
-    /* ---------------------------------------------------BACK END API CALL ---------------------------------------------------*/
-    /* const apiUrl = `http://localhost:4000/api/cities?startsWith=${cityName}&limit=15`;
-    axios.get(apiUrl).then((response) => setDataFound(response.data)); */
   }, [cityName]);
 
   function handleInputChange(e) {
