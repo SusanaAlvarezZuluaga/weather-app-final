@@ -1,13 +1,17 @@
 # WEATHER APP
 
-This project consists of a weather app in which you can search the weather condition in different cities of the world as well as hourly forecasts and daily forecasts. The app is both desktop and mobile friendly!!! However, I personally prefer the mobile version. Here is a [demo](https://susanaalvarezzuluaga.github.io/weather-app-final) of the app.
-The key difference between this app and a traditional weather app is that depending on the weather condition and temperature, you will see an animation in the background and an avatar dressing according to your sex and the weather condition of the city you search. You will also receive a tip of what you should wear.
+This project consists of a weather app in which you can search the weather condition in different cities of the world as well as hourly forecasts and daily forecasts. 
+* The app is both desktop and mobile friendly!!! However, I personally prefer the mobile version.
+* The key difference between this app and a traditional weather app is that depending on the weather condition and temperature, you will see an animation in the background and an avatar dressing according to your sex and the weather condition of the city you searched for. You will also receive a tip of what you should wear.
 
-## Demo Guide
 
-In this section I will give you a quick guide of how you can use my weather app. 
-Once you open the app, you are recieved with a login page. Please fill out your name, sex, and choose a city. Then click on the enter button. 
-<img width="275" alt="login-page" src="https://user-images.githubusercontent.com/61164953/142893939-4dfd4997-58ff-4d56-8521-b9d9c973e6bc.png">
+## Demo 
+### Click [here](https://susanaalvarezzuluaga.github.io/weather-app-final) to see the app running.
+In the video below you can find a quick tutorial of how to use the weather app.
+<br/>
+
+https://user-images.githubusercontent.com/61164953/142918647-213ad2b0-26ba-48ee-84d3-d562f8083ac9.mp4
+
 
 ## Installation and setup
 
