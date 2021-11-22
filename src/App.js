@@ -48,7 +48,7 @@ function App() {
   } */
   /* ------------------------------------------------DIRECT API CALLS ------------------------------------------------ */
   async function getCurrentWeather(cityId) {
-    const apiKey = 'a30d1945225aa875a071db924f0dc429';
+    const apiKey = process.env.REACT_APP_API_KEY;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${apiKey}`;
     const response = await axios.get(apiUrl);
     const city = response.data;
@@ -63,7 +63,7 @@ function App() {
     return cityCurrent;
   }
   async function getForecasts(lon, lat) {
-    const apiKey = 'a30d1945225aa875a071db924f0dc429';
+    const apiKey = process.env.REACT_APP_API_KEY;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,current&units=metric&appid=${apiKey}`;
     const response = await axios.get(apiUrl);
     const utcOffset = response.data.timezone_offset;
