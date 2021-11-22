@@ -7,7 +7,7 @@ In the master branch of this project you can see that I direcly fetched OpenWeat
 2. Clone the `call-to-my-api` branch of this repository.
 3. Run the command `npm install` in your terminal. This will install in your project folder all the packages used in this project.
 4. Access [OpenWeather's API](https://openweathermap.org) and create and account to get an API key.
-5. Create a .env file, and add the following information inside it: <br/>
+5. Create a .env file in the root directory, and add the following information inside it: <br/>
    `REACT_APP_WEATHER_API_URL=http://localhost:4000/api`
 6. Run the command `npm start` to see the app running
 
