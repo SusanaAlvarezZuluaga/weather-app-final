@@ -80,7 +80,7 @@
 .genderButtonsHolder {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 150px;
   margin-left: auto;
   margin-right: auto;
   height: 100px;
@@ -96,6 +96,7 @@
   appearance: none !important;
   display: hidden;
   border: none;
+  width: 75px;
 }
 .genderButton:after {
   font-family: 'FontAwesome';
@@ -250,6 +251,7 @@
 }
 
 /*-----------------media query -------------------------------------*/
+
 @media screen and (min-width: 768px) {
   .loginPage {
     flex-direction: row;
