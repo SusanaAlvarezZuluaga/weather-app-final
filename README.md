@@ -1,0 +1,2 @@
+# Weather app (call-to-my-api brancb )
+In the master branch of this project you can see that I direcly fetched OpenWeather's API to get the weather data. However, in this branch there is a version of the code where instead of fetching the weather data directly from OpenWeather's API, I fetched it from my own RESTful API which I created using Express.js. The repository of my API can be found in (here)
