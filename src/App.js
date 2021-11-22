@@ -32,8 +32,7 @@ function App() {
       ...cityList,
     ]);
   }
-  /* ------------------------------------------------API CALLS TO BACKEND ------------------------------------------------ */
-  /*   async function getCurrentWeather(cityId) {
+  async function getCurrentWeather(cityId) {
     const apiUrl = `${process.env.REACT_APP_WEATHER_API_URL}/currentWeather/${cityId}`;
     const response = await axios.get(apiUrl);
     const cityCurrent = response.data;
@@ -45,51 +44,6 @@ function App() {
     const response = await axios.get(apiUrl);
     const forecast = response.data;
     return forecast;
-  } */
-  /* ------------------------------------------------DIRECT API CALLS ------------------------------------------------ */
-  async function getCurrentWeather(cityId) {
-    const apiKey = process.env.REACT_APP_API_KEY;
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${apiKey}`;
-    const response = await axios.get(apiUrl);
-    const city = response.data;
-    const cityCurrent = {
-      id: cityId,
-      cityName: city.name,
-      currentTemperature: city.main.temp,
-      currentWeatherCondition: city.weather[0].main,
-      currentWeatherDescription: city.weather[0].description,
-      currentWeatherIcon: city.weather[0].icon,
-    };
-    return cityCurrent;
-  }
-  async function getForecasts(lon, lat) {
-    const apiKey = process.env.REACT_APP_API_KEY;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,current&units=metric&appid=${apiKey}`;
-    const response = await axios.get(apiUrl);
-    const utcOffset = response.data.timezone_offset;
-    const hourly = response.data.hourly;
-    const daily = response.data.daily;
-    //reduce hourly and reduce daily
-    let hourlyReduced = hourly.map((hour, index) => ({
-      id: index,
-      temp: hour.temp,
-      weatherCondition: hour.weather[0].main,
-      weatherIcon: hour.weather[0].icon,
-    }));
-    hourlyReduced = hourlyReduced.slice(0, 24);
-    const dailyReduced = daily.map((day, index) => ({
-      id: index,
-      minTemp: day.temp.min,
-      maxTemp: day.temp.max,
-      weatherCondition: day.weather[0].main,
-      weatherIcon: day.weather[0].icon,
-    }));
-    const forecastInfo = {
-      utcOffset: utcOffset,
-      hourlyForecast: hourlyReduced,
-      dailyForecast: dailyReduced,
-    };
-    return forecastInfo;
   }
 
   return (
