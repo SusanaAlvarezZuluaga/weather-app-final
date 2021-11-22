@@ -80,10 +80,10 @@
 .genderButtonsHolder {
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 170px;
   margin-left: auto;
   margin-right: auto;
-  height: 100px;
+  height: 110px;
 }
 
 .genderButton {
