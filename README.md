@@ -24,4 +24,4 @@ https://user-images.githubusercontent.com/61164953/142918647-213ad2b0-26ba-48ee-
 
 ## Important Notes
 
-In the master branch of this project you can see that I direcly fetched OpenWeather's API to get the weather data. However, in the [call-to-my-api](https://github.com/SusanaAlvarezZuluaga/weather-app-final/tree/call-to-my-api) branch there is a version of the code where instead of fetching the weather data directly from OpenWeather's API, I fetched it from my own RESTful API which I created using Express.js. The repository of API can be found in [here](https://github.com/SusanaAlvarezZuluaga/weather-app-api)
+In the master branch of this project you can see that I direcly fetched OpenWeather's API to get the weather data. However, in the [call-to-my-api](https://github.com/SusanaAlvarezZuluaga/weather-app-final/tree/call-to-my-api) branch there is a version of the code where instead of fetching the weather data directly from OpenWeather's API, I fetched it from my own RESTful API which I created using Express.js. The repository of my API can be found in [here](https://github.com/SusanaAlvarezZuluaga/weather-app-api)
