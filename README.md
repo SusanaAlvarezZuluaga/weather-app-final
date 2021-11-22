@@ -5,7 +5,9 @@ The key difference between this app and a traditional weather app is that depend
 
 ## Demo Guide
 
-In this section I will give you a quick guide of how you can use my weather app.
+In this section I will give you a quick guide of how you can use my weather app. 
+Once you open the app, you are recieved with a login page. Please fill out your name, sex, and choose a city. Then click on the enter button. 
+<img width="275" alt="login-page" src="https://user-images.githubusercontent.com/61164953/142893939-4dfd4997-58ff-4d56-8521-b9d9c973e6bc.png">
 
 ## Installation and setup
 
