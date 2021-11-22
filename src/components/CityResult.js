@@ -1,22 +1,34 @@
 function CityResult(props) {
+  const {
+    name,
+    id,
+    state,
+    country,
+    long,
+    lat,
+    handleAddCity,
+    handleCitySelect,
+    slideToCity,
+    setSearchPageOpen,
+  } = props;
   let completeCityName;
-  if (props.state !== '') {
-    completeCityName = `${props.name}, ${props.state}, ${props.country}`;
+  if (state !== '') {
+    completeCityName = `${name}, ${state}, ${country}`;
   } else {
-    completeCityName = `${props.name}, ${props.country}`;
+    completeCityName = `${name}, ${country}`;
   }
   return (
     <div
       className="cityResult"
       value="completeCityName"
       onClick={async () => {
-        await props.handleAddCity(props.id, props.long, props.lat);
-        await props.handleCitySelect(completeCityName);
-        if (props.slideToCity) {
-          props.slideToCity(0);
+        await handleAddCity(id, long, lat);
+        await handleCitySelect(completeCityName);
+        if (slideToCity) {
+          slideToCity(0);
         }
-        if (props.setSearchPageOpen) {
-          props.setSearchPageOpen(false);
+        if (setSearchPageOpen) {
+          setSearchPageOpen(false);
         }
       }}
     >

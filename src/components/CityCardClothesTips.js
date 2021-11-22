@@ -33,7 +33,6 @@ function CityCardClothesTips(props) {
   let avatar;
   let tipsMessage = '';
   let goingToRain = false;
-
   let tipsClass;
   avatarClicked ? (tipsClass = 'tipsDisplay') : (tipsClass = 'tipsHide');
   if (temperature <= 5) {

@@ -9,9 +9,8 @@ import '../styles/HomePage.css';
 import '../styles/CityCard.css';
 
 function CityCard(props) {
-  const currentWeatherCondition = props.currentInfo.currentWeatherCondition;
-  const currentWeatherIcon = props.currentInfo.currentWeatherIcon;
-  const weatherDescription = props.currentInfo.currentWeatherDescription;
+  const { currentWeatherCondition, currentWeatherIcon, weatherDescription } =
+    props.currentInfo;
   return (
     <div className="cityCard">
       <div className="firstPage">

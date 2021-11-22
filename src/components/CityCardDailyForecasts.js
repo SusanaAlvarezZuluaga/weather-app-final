@@ -1,16 +1,15 @@
 function CityCardDailyForecasts(props) {
-  const cityUtcOffset = props.utcOffset;
-  //returns the current day (and next days) in the city the person is looking for
+  const { utcOffset, dailyForecast } = props;
+
   function returnDay(index) {
     if (index === 0) {
       return 'Today';
     }
-
     const date = new Date();
     const localTime = date.getTime();
     const localOffset = date.getTimezoneOffset() * 60000;
     const utc = localTime + localOffset;
-    const cityDestinationOffset = cityUtcOffset * 1000;
+    const cityDestinationOffset = utcOffset * 1000;
     const cityTimeMs = utc + cityDestinationOffset;
     const dateInDestinationCity = new Date(cityTimeMs);
     const weekDayDestination = dateInDestinationCity.getDay();
@@ -44,7 +43,7 @@ function CityCardDailyForecasts(props) {
     <div className="dailyForecastsHolder">
       <div className="dailyForecastsTitle">Next Days</div>
       <div className="dailyForecastsSlidesHolder">
-        {props.dailyForecast.map((day, index) => (
+        {dailyForecast.map((day, index) => (
           <div className="dailyForecastSlide">
             <div className="dailyForecastDay">{returnDay(index)}</div>
             <div className="dailyForecastIconHolder">

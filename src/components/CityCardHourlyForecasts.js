@@ -1,18 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 function CityCardHourlyForecasts(props) {
-  const cityUtcOffset = props.utcOffset;
-
-  //returns the current hour (and next hours) in the city the person is looking for
+  const { utcOffset, hourlyForecast } = props;
   function returnHour(index) {
     if (index === 0) {
       return 'Now';
     }
-
     const date = new Date();
     const localTime = date.getTime();
     const localOffset = date.getTimezoneOffset() * 60000;
     const utc = localTime + localOffset;
-    const cityDestinationOffset = cityUtcOffset * 1000;
+    const cityDestinationOffset = utcOffset * 1000;
     const cityTimeMs = utc + cityDestinationOffset;
     const timeInDestinationCity = new Date(cityTimeMs);
     let hourInDestinationCity = timeInDestinationCity.getHours();
@@ -61,7 +58,7 @@ function CityCardHourlyForecasts(props) {
           },
         }}
       >
-        {props.hourlyForecast.map((hour, index) => (
+        {hourlyForecast.map((hour, index) => (
           <SwiperSlide>
             <div className="hourlyForecastSlide">
               <div className="hourlyForecastHour">{returnHour(index)}</div>

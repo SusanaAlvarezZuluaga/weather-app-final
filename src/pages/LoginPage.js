@@ -7,10 +7,8 @@ import logoWhite from '../images/logoWhite.png';
 import '../styles/Login-Page.css';
 
 function LoginPage(props) {
-  const { gender, handleGenderChange } = props;
-  const { name, handleLoginPageName } = props;
+  const { name, gender, handleGenderChange, handleLoginPageName } = props;
   const [city, setCity] = useState('');
-
   let history = useHistory();
 
   const redirect = () => {
