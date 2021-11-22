@@ -1,8 +1,8 @@
 # WEATHER APP
 
-This project consists of a weather app in which you can search the weather condition in different cities of the world as well as hourly forecasts and daily forecasts. 
-* The app is both desktop and mobile friendly!!! However, I personally prefer the mobile version.
-* The key difference between this app and a traditional weather app is that depending on the weather condition and temperature, you will see an animation in the background and an avatar dressing according to your sex and the weather condition of the city you searched for. You will also receive a tip of what you should wear.
+This project consists of a weather app in which you can search the weather condition for different cities of the world as well as hourly forecasts and daily forecasts. 
+* The app is both desktop and mobile friendly!!! (I personally prefer the mobile version)
+* The key difference between this app and a traditional weather app is that depending on the city's weather condition and temperature, you will see an animation in the background and an avatar dressing according the weather condition. You will also receive a tip of what you should wear.
 
 
 ## Demo 
