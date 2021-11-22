@@ -15,12 +15,11 @@ function HomePage(props) {
     swiper.slideTo(index);
   };
   useEffect(() => {
-    if (cityList.length === 2) {
+    if (cityList.length > 1) {
       setCityList([cityList[0]]);
-      console.log('BUGGGG');
     }
   }, []);
-  if (cityList.length == 0) {
+  if (cityList.length === 0) {
     return <Redirect to="/" />;
   } else {
     return (

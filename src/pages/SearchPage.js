@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
 import SearchBar from '../components/SearchBar';
-
 import '../styles/SearchPage.css';
 
 function SearchPage(props) {

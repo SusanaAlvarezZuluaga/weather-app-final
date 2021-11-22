@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import SwiperCore, { Pagination, Navigation, Thumbs, FreeMode } from 'swiper';
 import { Link } from 'react-router-dom';
@@ -9,19 +8,12 @@ import 'swiper/modules/pagination/pagination.scss'; // Pagination module
 import 'swiper/modules/navigation/navigation.scss'; // Navigation module
 import 'swiper/modules/thumbs/thumbs.scss';
 import CityCard from '../components/CityCard';
-import CityThumb from '../components/CityThumb';
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation, Thumbs, FreeMode]);
 function SwiperCities(props) {
-  const {
-    setSwiper,
-    cityList,
-    clientName,
-    clientGender,
-    setMenuPageOpen,
-    slideToCity,
-  } = props;
+  const { setSwiper, cityList, clientName, clientGender, setMenuPageOpen } =
+    props;
 
   const pagination = {
     el: '.dotsContainer',
@@ -74,7 +66,7 @@ function SwiperCities(props) {
         <div className="footer">
           <div class="logo-holder">
             <Link to="/">
-              <img src={logo} className="logo" />
+              <img src={logo} className="logo" alt="logo" />
             </Link>
           </div>
           <div class="pagination">

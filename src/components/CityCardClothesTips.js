@@ -145,6 +145,7 @@ function CityCardClothesTips(props) {
     <div className="cityCardTipsContainer">
       <div class="avatarHolder">
         <img
+          alt="avatar"
           className="avatarImg"
           src={avatar}
           onClick={() => setAvatarClicked(!avatarClicked)}

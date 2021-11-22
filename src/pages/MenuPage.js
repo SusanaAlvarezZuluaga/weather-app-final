@@ -1,4 +1,3 @@
-import SearchBar from '../components/SearchBar';
 import CityThumb from '../components/CityThumb';
 import '../styles/MenuPage.css';
 
