@@ -64,6 +64,7 @@ function LoginPage(props) {
               onChange={handleGenderChange}
             />
             <input
+              id="secondRadioButton"
               className="genderButton"
               type="radio"
               name="gender"
