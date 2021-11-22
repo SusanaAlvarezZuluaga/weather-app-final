@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/61164953/142918647-213ad2b0-26ba-48ee-
 2. Run the command `npm install` in your terminal. This will install in your project folder all the packages used in this project.
 3. Access [OpenWeather's API](https://openweathermap.org) and create a user to get an API key.
 4. Create a .env file, and put your api key inside this file. The .env file should have the following structure:
-   - REACT_APP_API_KEY=your_key_number
+   - REACT_APP_API_KEY=your_api_key
 5. Run the command `npm start` to run and see the app
 
 ## Important Notes
