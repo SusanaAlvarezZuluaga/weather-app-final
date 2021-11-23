@@ -22,8 +22,8 @@ function CityResult(props) {
       className="cityResult"
       value="completeCityName"
       onClick={async () => {
+        handleCitySelect(completeCityName);
         await handleAddCity(id, long, lat);
-        await handleCitySelect(completeCityName);
         if (slideToCity) {
           slideToCity(0);
         }

@@ -56,7 +56,6 @@ function LoginPage(props) {
               className="genderButton"
               type="radio"
               name="gender"
-              check={gender === 'female'}
               value="female"
               data-icon=""
               onChange={handleGenderChange}
