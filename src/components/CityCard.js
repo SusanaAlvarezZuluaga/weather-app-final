@@ -9,8 +9,11 @@ import '../styles/HomePage.css';
 import '../styles/CityCard.css';
 
 function CityCard(props) {
-  const { currentWeatherCondition, currentWeatherIcon, weatherDescription } =
-    props.currentInfo;
+  const {
+    currentWeatherCondition,
+    currentWeatherIcon,
+    currentWeatherDescription,
+  } = props.currentInfo;
   return (
     <div className="cityCard">
       <div className="firstPage">
@@ -35,7 +38,7 @@ function CityCard(props) {
 
       <WeatherAnimation
         weatherCondition={currentWeatherCondition}
-        weatherDescription={weatherDescription}
+        weatherDescription={currentWeatherDescription}
         weatherIcon={currentWeatherIcon}
       />
     </div>

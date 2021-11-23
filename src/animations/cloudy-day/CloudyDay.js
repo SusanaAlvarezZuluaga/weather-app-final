@@ -1,10 +1,10 @@
 import './cloudy-day.css';
 
 function CloudyDay(props) {
-  let { weatherCondition, weatherDescription } = props;
+  let { weatherCondition, weatherDescription, thumb } = props;
   let cloudClass = '';
   let sizeClass = '';
-  if (props.thumb) {
+  if (thumb) {
     sizeClass = 'thumb';
   }
   if (
