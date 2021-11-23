@@ -1,4 +1,3 @@
-import SearchBar from '../components/SearchBar';
 import CityThumb from '../components/CityThumb';
 import '../styles/MenuPage.css';
 
@@ -18,6 +17,7 @@ function MenuPage(props) {
       <div className="cityThumbsHolder">
         {cityList.map((city, index) => (
           <CityThumb
+            key={index}
             cityIndex={index}
             currentInfo={city.currentInfo}
             slideToCity={slideToCity}

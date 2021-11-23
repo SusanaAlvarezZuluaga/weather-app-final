@@ -1,8 +1,8 @@
 import './clear-day.css';
 
 function ClearDay(props) {
-  let className;
-  let sunClass;
+  let className = '';
+  let sunClass = '';
   if (props.thumb) {
     className = 'thumb';
     sunClass = 'smaller';

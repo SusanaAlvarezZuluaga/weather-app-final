@@ -1,13 +1,12 @@
 function CityCardHeader(props) {
+  const { cityName, currentTemperature, currentWeatherDescription } = props;
   return (
     <div className="cityCardHeader">
       <div className="infoContainer">
-        <div className="cityName"> {props.cityName}</div>
-        <div className="cityTemp">{`${Math.round(
-          props.currentTemperature
-        )}°C`}</div>
+        <div className="cityName"> {cityName}</div>
+        <div className="cityTemp">{`${Math.round(currentTemperature)}°C`}</div>
         <div className="cityWeatherCondition">
-          <div> {props.currentWeatherDescription}</div>
+          <div> {currentWeatherDescription}</div>
         </div>
       </div>
     </div>

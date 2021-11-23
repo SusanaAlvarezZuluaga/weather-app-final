@@ -33,7 +33,6 @@ function CityCardClothesTips(props) {
   let avatar;
   let tipsMessage = '';
   let goingToRain = false;
-
   let tipsClass;
   avatarClicked ? (tipsClass = 'tipsDisplay') : (tipsClass = 'tipsHide');
   if (temperature <= 5) {
@@ -143,8 +142,9 @@ function CityCardClothesTips(props) {
 
   return (
     <div className="cityCardTipsContainer">
-      <div class="avatarHolder">
+      <div className="avatarHolder">
         <img
+          alt="avatar"
           className="avatarImg"
           src={avatar}
           onClick={() => setAvatarClicked(!avatarClicked)}

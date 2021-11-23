@@ -3,8 +3,15 @@ import axios from 'axios';
 import CityResult from '../components/CityResult';
 
 function SearchBar(props) {
+  const {
+    loginPageCall,
+    setCity,
+    handleAddCity,
+    slideToCity,
+    setSearchPageOpen,
+  } = props;
   let holderClass;
-  if (props.loginPageCall) {
+  if (loginPageCall) {
     holderClass = 'smallHolder';
   }
   const [cityName, setCityName] = useState('');
@@ -15,8 +22,8 @@ function SearchBar(props) {
   }, [cityName]);
 
   function handleInputChange(e) {
-    if (props.setCity) {
-      props.setCity(e.target.value);
+    if (setCity) {
+      setCity(e.target.value);
     }
     setCityName(e.target.value);
   }
@@ -45,8 +52,8 @@ function SearchBar(props) {
         <div
           className="iconHolderClear"
           onClick={() => {
-            if (props.setCity) {
-              props.setCity('');
+            if (setCity) {
+              setCity('');
             }
             setCityName('');
           }}
@@ -64,10 +71,10 @@ function SearchBar(props) {
             name={cityResult.name}
             state={cityResult.state}
             country={cityResult.country}
-            handleAddCity={props.handleAddCity}
+            handleAddCity={handleAddCity}
             handleCitySelect={handleCitySelect}
-            slideToCity={props.slideToCity}
-            setSearchPageOpen={props.setSearchPageOpen}
+            slideToCity={slideToCity}
+            setSearchPageOpen={setSearchPageOpen}
           />
         ))}
       </div>

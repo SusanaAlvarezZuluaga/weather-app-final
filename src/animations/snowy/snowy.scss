@@ -1,3 +1,4 @@
+@use 'sass:math';
 $d: 60; // density
 $w: 600; // grid size
 $s: 7s; // speed
@@ -60,7 +61,7 @@ $grad: ();
   content: '';
 }
 .snow:after {
-  margin-left: -$w/3 + px;
+  margin-left: math.div(-$w, 3) + px;
   opacity: 0.4;
   animation-duration: $s * 2;
   animation-direction: reverse;
@@ -69,7 +70,7 @@ $grad: ();
 .snow:before {
   animation-duration: $s * 3;
   animation-direction: reverse;
-  margin-left: -$w/2 + px;
+  margin-left: math.div(-$w, 2) + px;
   opacity: 0.65;
   filter: blur(1.5px);
 }

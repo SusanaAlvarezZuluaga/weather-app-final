@@ -9,21 +9,21 @@ function CloudyNight(props) {
     sizeClass = 'thumb';
   }
   if (
-    weatherCondition == 'Clouds' &&
+    weatherCondition === 'Clouds' &&
     (weatherDescription === 'few clouds' ||
-      weatherDescription == 'scattered clouds')
+      weatherDescription === 'scattered clouds')
   ) {
     cloudClass = 'cloudyNight';
     starClass = 'visibleStars';
   } else if (
-    weatherCondition == 'Mist' ||
-    weatherCondition == 'Smoke' ||
-    weatherCondition == 'Haze' ||
-    weatherCondition == 'Fog' ||
-    weatherCondition == 'Ash' ||
-    (weatherCondition == 'Clouds' &&
+    weatherCondition === 'Mist' ||
+    weatherCondition === 'Smoke' ||
+    weatherCondition === 'Haze' ||
+    weatherCondition === 'Fog' ||
+    weatherCondition === 'Ash' ||
+    (weatherCondition === 'Clouds' &&
       (weatherDescription === 'broken clouds' ||
-        weatherDescription == 'overcast clouds'))
+        weatherDescription === 'overcast clouds'))
   ) {
     cloudClass = 'veryCloudyNight';
     starClass = 'noStars';

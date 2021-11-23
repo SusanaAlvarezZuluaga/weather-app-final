@@ -10,12 +10,12 @@ function Rainy({ isDay, thumb }) {
     sizeClass = 'thumb';
   }
   useEffect(() => {
-    var rainCanvas = canvasRef.current;
-    var ctx2 = rainCanvas.getContext('2d');
-    var rainthroughnum = 10;
-    var RainTrough = [];
-    var rainnum = 50;
-    var rain = [];
+    const rainCanvas = canvasRef.current;
+    const ctx2 = rainCanvas.getContext('2d');
+    const rainthroughnum = 10;
+    const RainTrough = [];
+    const rainnum = 50;
+    const rain = [];
     window.addEventListener('resize', function () {
       rainCanvas.width = window.innerWidth;
       rainCanvas.height = window.innerHeight;
@@ -30,7 +30,7 @@ function Rainy({ isDay, thumb }) {
     }
 
     function createRainTrough() {
-      for (var i = 0; i < rainthroughnum; i++) {
+      for (let i = 0; i < rainthroughnum; i++) {
         RainTrough[i] = {
           x: random(0, rainCanvas.width),
           y: random(0, rainCanvas.height),
@@ -43,7 +43,7 @@ function Rainy({ isDay, thumb }) {
     }
 
     function createRain() {
-      for (var i = 0; i < rainnum; i++) {
+      for (let i = 0; i < rainnum; i++) {
         rain[i] = {
           x: Math.random() * rainCanvas.width,
           y: Math.random() * rainCanvas.height,
@@ -68,7 +68,7 @@ function Rainy({ isDay, thumb }) {
 
     function animateRain() {
       clearrainCanvas();
-      for (var i = 0; i < rainnum; i++) {
+      for (let i = 0; i < rainnum; i++) {
         rain[i].x += rain[i].xs;
         rain[i].y += rain[i].ys;
         if (rain[i].x > rainCanvas.width || rain[i].y > rainCanvas.height) {

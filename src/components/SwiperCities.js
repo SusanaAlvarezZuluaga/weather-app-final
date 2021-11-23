@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import SwiperCore, { Pagination, Navigation, Thumbs, FreeMode } from 'swiper';
 import { Link } from 'react-router-dom';
@@ -9,19 +8,12 @@ import 'swiper/modules/pagination/pagination.scss'; // Pagination module
 import 'swiper/modules/navigation/navigation.scss'; // Navigation module
 import 'swiper/modules/thumbs/thumbs.scss';
 import CityCard from '../components/CityCard';
-import CityThumb from '../components/CityThumb';
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation, Thumbs, FreeMode]);
 function SwiperCities(props) {
-  const {
-    setSwiper,
-    cityList,
-    clientName,
-    clientGender,
-    setMenuPageOpen,
-    slideToCity,
-  } = props;
+  const { setSwiper, cityList, clientName, clientGender, setMenuPageOpen } =
+    props;
 
   const pagination = {
     el: '.dotsContainer',
@@ -47,7 +39,7 @@ function SwiperCities(props) {
         pagination={pagination}
       >
         {cityList.map((city, index) => (
-          <SwiperSlide className="slide">
+          <SwiperSlide className="slide" key={index}>
             <CityCard
               id={index}
               currentInfo={city.currentInfo}
@@ -60,25 +52,25 @@ function SwiperCities(props) {
           </SwiperSlide>
         ))}
         <div className="navigation">
-          <div class="arrow1Container">
-            <div class="arrow1">
-              <span class="material-icons arrows"> arrow_back_ios</span>
+          <div className="arrow1Container">
+            <div className="arrow1">
+              <span className="material-icons arrows"> arrow_back_ios</span>
             </div>
           </div>
-          <div class="arrow2Container">
-            <div class="arrow2">
-              <span class="material-icons arrows"> arrow_forward_ios</span>
+          <div className="arrow2Container">
+            <div className="arrow2">
+              <span className="material-icons arrows"> arrow_forward_ios</span>
             </div>
           </div>
         </div>
         <div className="footer">
-          <div class="logo-holder">
+          <div className="logo-holder">
             <Link to="/">
-              <img src={logo} className="logo" />
+              <img src={logo} className="logo" alt="logo" />
             </Link>
           </div>
-          <div class="pagination">
-            <div class="dotsContainer"></div>
+          <div className="pagination">
+            <div className="dotsContainer"></div>
           </div>
           <div
             className="searchBar"

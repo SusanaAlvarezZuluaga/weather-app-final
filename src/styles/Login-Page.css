@@ -79,13 +79,13 @@
 /*-----------------gender icons -------------------------------------*/
 .genderButtonsHolder {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
   height: 100px;
 }
-#firstRadioButton {
-  margin-right: 75px;
-}
+
 .genderButton {
   outline: none !important;
   appearance: none !important;
@@ -96,6 +96,7 @@
   appearance: none !important;
   display: hidden;
   border: none;
+  width: 85px;
 }
 .genderButton:after {
   font-family: 'FontAwesome';
@@ -108,7 +109,7 @@
   transition: box-shadow 1s, color 1s;
   z-index: 10;
   position: relative;
-  right: 30px;
+  right: 0px;
 }
 .genderButton:checked:after {
   box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.4);
@@ -203,7 +204,7 @@
   transition: all 0.3s ease-out;
 }
 .wrapper .button:nth-child(1) span {
-  color: #4267b2;
+  color: #494646;
   font-size: 10px;
 }
 .wrapper .button:nth-child(2) span {
@@ -211,7 +212,7 @@
   font-size: 10px;
 }
 .wrapper .button:nth-child(3) span {
-  color: #333;
+  color: #494646;
   font-size: 10px;
 }
 
@@ -250,11 +251,7 @@
 }
 
 /*-----------------media query -------------------------------------*/
-@media screen and (min-width: 430px) {
-  .nameInput {
-    width: 350px;
-  }
-}
+
 @media screen and (min-width: 768px) {
   .loginPage {
     flex-direction: row;
