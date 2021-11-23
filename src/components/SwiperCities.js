@@ -39,7 +39,7 @@ function SwiperCities(props) {
         pagination={pagination}
       >
         {cityList.map((city, index) => (
-          <SwiperSlide className="slide">
+          <SwiperSlide className="slide" key={index}>
             <CityCard
               id={index}
               currentInfo={city.currentInfo}
@@ -52,25 +52,25 @@ function SwiperCities(props) {
           </SwiperSlide>
         ))}
         <div className="navigation">
-          <div class="arrow1Container">
-            <div class="arrow1">
-              <span class="material-icons arrows"> arrow_back_ios</span>
+          <div className="arrow1Container">
+            <div className="arrow1">
+              <span className="material-icons arrows"> arrow_back_ios</span>
             </div>
           </div>
-          <div class="arrow2Container">
-            <div class="arrow2">
-              <span class="material-icons arrows"> arrow_forward_ios</span>
+          <div className="arrow2Container">
+            <div className="arrow2">
+              <span className="material-icons arrows"> arrow_forward_ios</span>
             </div>
           </div>
         </div>
         <div className="footer">
-          <div class="logo-holder">
+          <div className="logo-holder">
             <Link to="/">
               <img src={logo} className="logo" alt="logo" />
             </Link>
           </div>
-          <div class="pagination">
-            <div class="dotsContainer"></div>
+          <div className="pagination">
+            <div className="dotsContainer"></div>
           </div>
           <div
             className="searchBar"

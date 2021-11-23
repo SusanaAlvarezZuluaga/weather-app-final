@@ -142,7 +142,7 @@ function CityCardClothesTips(props) {
 
   return (
     <div className="cityCardTipsContainer">
-      <div class="avatarHolder">
+      <div className="avatarHolder">
         <img
           alt="avatar"
           className="avatarImg"

@@ -11,18 +11,12 @@ function LoginPage(props) {
   const [city, setCity] = useState('');
   let history = useHistory();
 
-  const redirect = () => {
-    if (name !== '' && gender !== '' && city !== '') {
-      history.push('/home');
-    }
-  };
-
   const alertMsg = () => toast.error('Please fill all the fields');
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
+  const redirect = () => {
     if (name === '' || gender === '' || city === '') {
       alertMsg();
+    } else {
+      history.push('/home');
     }
   };
 
@@ -41,7 +35,7 @@ function LoginPage(props) {
           <p className="bigText"> Tell us who and where you are...</p>
           <p className="smallerText"> We'll tell you what to wear!</p>
         </div>
-        <form lang="en" className="formStyle" onSubmit={handleFormSubmit}>
+        <form lang="en" className="formStyle">
           <input
             className="nameInput"
             name="name"
@@ -65,7 +59,6 @@ function LoginPage(props) {
               className="genderButton"
               type="radio"
               name="gender"
-              check={gender === 'male'}
               value="male"
               data-icon=""
               onChange={handleGenderChange}
@@ -79,7 +72,7 @@ function LoginPage(props) {
               city={city}
               setCity={setCity}
             />
-            <button className="submitButton" type="submit" onClick={redirect}>
+            <button className="submitButton" type="button" onClick={redirect}>
               Enter
             </button>
             <ToastContainer

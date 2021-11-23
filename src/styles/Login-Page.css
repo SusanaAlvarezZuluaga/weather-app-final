@@ -96,7 +96,7 @@
   appearance: none !important;
   display: hidden;
   border: none;
-  width: 75px;
+  width: 85px;
 }
 .genderButton:after {
   font-family: 'FontAwesome';
@@ -204,7 +204,7 @@
   transition: all 0.3s ease-out;
 }
 .wrapper .button:nth-child(1) span {
-  color: #4267b2;
+  color: #494646;
   font-size: 10px;
 }
 .wrapper .button:nth-child(2) span {
@@ -212,7 +212,7 @@
   font-size: 10px;
 }
 .wrapper .button:nth-child(3) span {
-  color: #333;
+  color: #494646;
   font-size: 10px;
 }
 

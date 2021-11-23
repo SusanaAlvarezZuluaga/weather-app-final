@@ -44,7 +44,7 @@ function CityCardDailyForecasts(props) {
       <div className="dailyForecastsTitle">Next Days</div>
       <div className="dailyForecastsSlidesHolder">
         {dailyForecast.map((day, index) => (
-          <div className="dailyForecastSlide">
+          <div key={index} className="dailyForecastSlide">
             <div className="dailyForecastDay">{returnDay(index)}</div>
             <div className="dailyForecastIconHolder">
               <img

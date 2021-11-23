@@ -59,7 +59,7 @@ function CityCardHourlyForecasts(props) {
         }}
       >
         {hourlyForecast.map((hour, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className="hourlyForecastSlide">
               <div className="hourlyForecastHour">{returnHour(index)}</div>
               <div className="hourlyForecastIconHolder">

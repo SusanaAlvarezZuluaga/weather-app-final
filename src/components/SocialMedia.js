@@ -1,9 +1,6 @@
 import '../styles/Login-Page.css';
 
 function SocialMedia() {
-  function handleRedirect(url) {
-    return window.open(url);
-  }
   return (
     <div className="wrapper">
       <div className="button">
@@ -12,11 +9,9 @@ function SocialMedia() {
         </div>
         <a
           className="removeHiperLinks"
-          onClick={() => {
-            handleRedirect(
-              'https://www.facebook.com/WearThere-102306738950908'
-            );
-          }}
+          href="https://www.facebook.com/WearThere-102306738950908"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span>Facebook</span>
         </a>
@@ -27,11 +22,9 @@ function SocialMedia() {
         </div>
         <a
           className="removeHiperLinks"
-          onClick={() => {
-            handleRedirect(
-              'https://www.instagram.com/wearthere_/?fbclid=IwAR3G3T4Xv970_HeR1Asbppnvu47JHSVM0qcRY9bWSPuEqpiWNzOfhoCLa2U'
-            );
-          }}
+          href="https://www.instagram.com/wearthere_/?fbclid=IwAR3G3T4Xv970_HeR1Asbppnvu47JHSVM0qcRY9bWSPuEqpiWNzOfhoCLa2U"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span>Instagram</span>
         </a>
@@ -42,11 +35,9 @@ function SocialMedia() {
         </div>
         <a
           className="removeHiperLinks"
-          onClick={() => {
-            handleRedirect(
-              'https://github.com/WildCodeSchool/2021-09-lisbon-webdev-project2-group3'
-            );
-          }}
+          href="https://github.com/WildCodeSchool/2021-09-lisbon-webdev-project2-group3"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span>GitHub</span>
         </a>

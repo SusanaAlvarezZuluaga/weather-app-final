@@ -14,10 +14,12 @@ function HomePage(props) {
   const slideToCity = (index) => {
     swiper.slideTo(index);
   };
+  //run only when mounted
   useEffect(() => {
     if (cityList.length > 1) {
       setCityList([cityList[0]]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (cityList.length === 0) {
     return <Redirect to="/" />;

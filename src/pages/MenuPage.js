@@ -17,6 +17,7 @@ function MenuPage(props) {
       <div className="cityThumbsHolder">
         {cityList.map((city, index) => (
           <CityThumb
+            key={index}
             cityIndex={index}
             currentInfo={city.currentInfo}
             slideToCity={slideToCity}
