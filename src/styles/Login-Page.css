@@ -72,9 +72,10 @@
   border: 0px;
   opacity: 0.6;
   height: 30px;
-  width: 80vw;
   outline: none;
   margin-bottom: 30px;
+  width: 100%;
+  max-width: 300px;
 }
 /*-----------------gender icons -------------------------------------*/
 .genderButtonsHolder {
@@ -276,10 +277,6 @@
     font-size: 100px;
   }
 
-  .nameInput {
-    width: 50vw;
-  }
-
   .centerButton {
     width: 100%;
   }
@@ -328,10 +325,6 @@
   }
   .wrapper .button:nth-child(3) span {
     font-size: 15px;
-  }
-
-  .nameInput {
-    width: 350px;
   }
 
   .containerPosition {

@@ -22,7 +22,7 @@ function HomePage(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (cityList.length === 0) {
-    return <Redirect to="/" />;
+    return <Redirect to="/" basename={process.env.PUBLIC_URL} />;
   } else {
     return (
       <div>
